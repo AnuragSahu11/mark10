@@ -1,5 +1,6 @@
 const currency = [2000, 500, 200, 100, 50, 20, 10, 5, 2, 1];
 
+const paidBlock = document.querySelector('#paid')
 const bill = document.querySelector(".input_bill");
 const paid = document.querySelector(".input_paid");
 const alert = document.querySelector(".alert");
@@ -37,8 +38,12 @@ function calcChange(money) {
   }
   return note;
 }
+bill.addEventListener('input',()=>{
+  paidBlock.classList.remove('is-hidden')
+})
 
 button.addEventListener("click", () => {
+  
   tbody.innerHTML = "";
   let amount = paid.value - bill.value;
   if (amount < 0) {
