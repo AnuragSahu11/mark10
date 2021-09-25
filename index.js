@@ -12,7 +12,7 @@ function calcChange(money) {
     { name: 2000, num: 0 },
     { name: 500, num: 0 },
     { name: 200, num: 0 },
-    { name: 200, num: 0 },
+    { name: 100, num: 0 },
     { name: 50, num: 0 },
     { name: 20, num: 0 },
     { name: 10, num: 0 },
@@ -45,7 +45,8 @@ bill.addEventListener('input',()=>{
 button.addEventListener("click", () => {
   
   tbody.innerHTML = "";
-  let amount = paid.value - bill.value;
+  if(paid.value > 0 && bill.value > 0){
+    let amount = paid.value - bill.value;
   if (amount < 0) {
     alert.innerHTML = "Do you want to wash dishes?";
   } else {
@@ -65,4 +66,9 @@ button.addEventListener("click", () => {
       tbody.appendChild(a);
     }
   });
+  }
+  else{
+    alert.innerHTML = "Enter correct amount"
+  }
+  
 });
