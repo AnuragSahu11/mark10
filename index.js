@@ -43,10 +43,12 @@ button.addEventListener("click", () => {
   thead.innerHTML = "";
   if (paid.value > 0 && bill.value > 0) {
     let amount = paid.value - bill.value;
+    
     if (amount < 0) {
       alert.innerHTML = "Do you want to wash dishes?";
     } else {
       note = calcChange(amount);
+      alert.innerHTML = ``;
     }
     thead.innerHTML = `<tr>
     <th>Amount</th>
