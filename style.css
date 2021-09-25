@@ -9,16 +9,31 @@
 body {
   font-family: sans-serif;
 }
-/* .is-hidden{
+.is-hidden{
     display: none;
-} */
+}
 .input_container {
   margin-left: 25vw;
   margin-right: 25vw;
   margin-bottom: 25px;
   margin-top: 50px;
 }
+table, th, td {
+  border: 1px #00d1b2 solid;
+}
+
+th{
+  padding: 10px;
+}
+td{
+  padding: 10px;
+}
+.container{
+  margin-top: 100px;
+}
 .table {
+  
+  border-collapse: collapse;
   margin-left: auto;
   margin-right: auto;
 }
@@ -50,7 +65,7 @@ body {
   padding: 10px 20px;
   border-radius: 12px;
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
 }
 .button:hover {
   cursor: pointer;
